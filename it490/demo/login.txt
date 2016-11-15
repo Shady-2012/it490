@@ -1,0 +1,24 @@
+2016-11-15 10:05:07am Response Code 0: Login successful for username ssz5.
+2016-11-15 10:13:25am Response Code 2: Username sadsa does not exist.
+2016-11-15 11:38:10am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:38:10am Response Code 2: Username  does not exist.
+2016-11-15 11:41:46am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:46:11am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:50:42am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:50:54am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:51:23am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:51:48am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:52:13am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:52:39am Response Code 0: Login successful for username ssz5.
+2016-11-15 11:57:08am Response Code 2: Username  does not exist.
+2016-11-15 11:57:19am Response Code 2: Username  does not exist.
+2016-11-15 11:58:14am Response Code 2: Username  does not exist.
+2016-11-15 12:00:39pm Response Code 2: Username  does not exist.
+2016-11-15 12:04:19pm Response Code 0: Login successful for username ssz5.
+2016-11-15 12:07:28pm Response Code 0: Login successful for username ssz5.
+2016-11-15 12:10:37pm Response Code 0: Login successful for username ssz5.
+2016-11-15 12:11:59pm Response Code 0: Login successful for username ssz5.
+2016-11-15 12:18:46pm Response Code 1: Wrong password for username ssz5.
+2016-11-15 12:18:55pm Response Code 0: Login successful for username ssz5.
+2016-11-15 12:21:24pm Response Code 0: Login successful for username ssz5.
+2016-11-15 12:28:52pm Response Code 0: Login successful for username ssz5.
