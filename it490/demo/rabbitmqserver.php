@@ -23,7 +23,7 @@
   			return array("returnCode" => '0', 'message'=>"Server received request and processed");
 		}
 		function NJIT() {
-			 $con=mysqli_connect ("localhost", "Matt","ms629","it490");
+			 $con=mysqli_connect ("localhost", "root","shady","pass");
 			$sql="select * from NJIT";
         		$result=mysqli_query($con,$sql);
 			$count=mysqli_num_rows($result);
@@ -45,7 +45,7 @@
  		      }
  		
 		function Rutgers(){
-        		 $con=mysqli_connect ("localhost", "Matt","ms629","it490");
+        		 $con=mysqli_connect ("localhost", "root","shady","pass");
 			$sql="select * from RutgersNewark";
         		$result=mysqli_query($con,$sql);
 			$count=mysqli_num_rows($result);
