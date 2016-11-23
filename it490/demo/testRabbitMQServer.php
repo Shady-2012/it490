@@ -95,41 +95,6 @@
 		}
 	}
 
-	function doData($major)
-	{
-		$con=mysqli_connect("localhost","root","shady","pass") or die("cannot connect");
-		//$request['major']
-		$sql=("select * from college where major='$major'") or die (mysqli_error());
-		$result=mysqli_query($con,$sql);
-		$count=mysqli_num_rows($result);
-		echo "list of college offering $major";
-		if($count >0){
-		$sql="select * from college where major ='$major'";
-		$result=mysqli_query($con, $sql);
-		while ($rows=mysqli_fetch_array($result)):
-		$major=$rows['major'];
-		$fees=$rows ['fees'];
-		$rating=$rows['rating'];
-		$school=$rows['school'];
-		echo "college name: $school
-		fees :$fees
-		rating  $rating";
-		endwhile;
-		}
-		else
-		{echo "<br><br>0 results";
-		}
-		if (mysqli_query ($con,$sql))
-			{
-				$response = "0";
-				return $response;
-			}
-		
-		//$response = array($major, $school, $fees, $rating);
-		//return $response;
-
-	}
-	
 	function getProfile($username)
 	{	
 		$con=mysqli_connect ("localhost","root","shady","pass");
@@ -147,8 +112,33 @@
 		}
 		$response = array($email, $firstname, $lastname, $address, $sat, $major);
 		return $response;
+		
 	}
+/*
 
+	function doColleges($colleges){
+			
+		 	$con=mysqli_connect ("localhost", "root","shady","pass");
+			$sql="select * from collegeList";
+        		$result=mysqli_query($con,$sql);
+			$count=mysqli_num_rows($result);
+			echo "$count\n";
+var_dump($result);
+			$response=array();
+			for ($i = 0; $i < $count;$i++)
+			{
+				$row = $result->fetch_array();
+				echo "row data:";
+				print_r($row);
+				echo "\n";
+				array_push($response,$row);
+
+			}
+
+			return $response;
+				
+ 		      }
+*/
 
 	function requestProcessor($request)
 	{
@@ -162,10 +152,10 @@
 				return doLogin($request['username'],$request['password']);
 			case "profile":
 				return getProfile($request['username']);
-			case "data":
-				return doData($request['major']);
 			case "validate_session":
 				return doValidate($request['sessionId']);
+			//case "colleges":
+			//	return doColleges($request['colleges']);
 			case "register":
 				return doRegister($request['username'],$request['password'],$request['email'], $request['firstname'],$request['lastname'],$request['address'],$request['sat'],$request['major']);
 

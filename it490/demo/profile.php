@@ -1,4 +1,3 @@
-
 <?php
 	require_once('path.inc');
 	require_once('get_host_info.inc');
@@ -21,6 +20,6 @@
     		echo $response[$i];
     		echo "<br>";
 	}
-	echo "<br><a href=collegeList.html> List of Colleges</a><br>";
+	echo "<br><a href=colleges.php> List of Colleges</a><br>";
 	echo "<a href=majorsList.html> List of Majors</a><br>";
 ?>
