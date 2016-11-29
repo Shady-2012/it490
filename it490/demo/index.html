@@ -1,70 +1,63 @@
-<!DOCTYPE html>
-<h1 style="color:white;">Welcome to the College Planner</h1>
-<head>
-<h2 style="color:white;"><i>
-choose the college that fits you </i>
+<?php
+	session_start();
+	$username = $_SESSION["username"];
 
-</h2>
-<body>
+	if (isset($username))
+	{
+		$loggedIn = True;
+	}
+	else
+	{
+		$loggedIn = False;
+	}
+?>
 
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Colleges.com</title>
+		<link rel="stylesheet" type="text/css" href="style.css"
+	</head>
 
-<img src="Graduation.jpg" alt="social View" style="width:350px;height:350px;">
+	<body>
+		<ul>
+			<li style="color:green; border-right: 1px solid #bbb"><a href="index.html"><b>Colleges.com</b></a></li>
+			<li><a href="register.html">Register</a></li>
+			<li><a href="profile.php">Profile</a></li>
+			<li><a href="colleges.php">College List</a></li>
+			<li><a href="majornj.php">Major List</a></li>
+			<li style="float:right" class="dropdown">
+				
+				<?php
+					if ($loggedIn == True)
+					{
+						<html>
+							<a href="#" class="dropbtn">Logged in as: $username</a>
+							<div class="dropdown-content">	
+								<a href="logout.php">Logout</a>
+			    				</div>
+						</html>
+					}
+					else
+					{
+						<html>
+							<a href="#" class="dropbtn">Logged in as: Anonymous</a>
+							<div class="dropdown-content">	
+								<a href="login.html">Login</a>
+			    				</div></html>
+					}
+				?>	
+			</li>
+		</ul>
 
-<body background="90.jpg">
-
-<h3 style="color:white;"><img  style="width:50px;height:50px;"><em> we help you to find the right college </em></h3>
-
-
-<br>
-
-
-<br>
-<style>
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-      float: left;
-}
-
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-</style>
-</head>
-<body>
-
-
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="profile.html">sign-up</a></li>
-   <li><a href="log.html">Login</a></li>
-  <li><a href="contact.html">Contact</a></li>
- <li><a href="paypal.html">forms</a></li>
-   <li><a href="about.html">about us</a></li>
-</ul>
-
-
-</body>
-
-
-
-
+		<br><br>
+		
+		<div>
+			<h1>Colleges.com</h1>
+			<center><a class="button" href="register.html">Register</a>
+			<a class="button" href="login.html">Login</a></center>
+		</div>
+	</body>
 </html>
-
-
 
 

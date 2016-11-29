@@ -114,31 +114,7 @@
 		return $response;
 		
 	}
-/*
 
-	function doColleges($colleges){
-			
-		 	$con=mysqli_connect ("localhost", "root","shady","pass");
-			$sql="select * from collegeList";
-        		$result=mysqli_query($con,$sql);
-			$count=mysqli_num_rows($result);
-			echo "$count\n";
-var_dump($result);
-			$response=array();
-			for ($i = 0; $i < $count;$i++)
-			{
-				$row = $result->fetch_array();
-				echo "row data:";
-				print_r($row);
-				echo "\n";
-				array_push($response,$row);
-
-			}
-
-			return $response;
-				
- 		      }
-*/
 
 	function requestProcessor($request)
 	{

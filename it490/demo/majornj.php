@@ -5,7 +5,7 @@
 	$client = new rabbitMQClient("testRabbitMQ.ini","DMZServer");
 	
 	
-	$request['type'] = 'Colleges';
+	$request['type'] = 'NJIT';
 	$response = $client->send_request($request);
 		$length = count($response);
 
@@ -13,7 +13,8 @@
 		
 		echo "$k[0] <br>    ".PHP_EOL;
 }
-	echo "<a href=majornj.php> List of Majors</a><br>";
+	
+	echo "<a href=majoru.php> Rutgers Major</a><br>";
 ?>
 
 

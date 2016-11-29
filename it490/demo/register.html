@@ -1,0 +1,79 @@
+<DOCTYPE html>
+
+<html>
+	<head>
+		<title>Colleges.com: Register</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+  	</head>
+
+  	<body>
+		<ul>
+			<li style="color:green; border-right: 1px solid #bbb"><a href="index.html"><b>Colleges.com</b></a></li>
+			<li><a href="register.html">Register</a></li>
+			<li><a href="collegeList.php">College List</a></li>
+			<li><a href="MajorList.php">Major List</a></li>
+			<li style="float:right" class="dropdown" >
+			    <a href="#" class="dropbtn">Logged in as: <?php if (isset($username)) {echo "<b>$username<b>";} else {echo "<b>Anonymous<b>";}?></a>
+			    <div class="dropdown-content">
+			      <a href="login.html">Login</a>
+			    </div>
+			  </li>
+		</ul>
+
+		<br><br>
+
+    		<div>
+			<h1>Register</h1>
+			<form method="post" action="register.php">
+				<label for="username">Username</label>
+		    		<input type="text" id ="username" name="username" required/>
+
+				<label for="password">Password</label>	
+				<input type="password" id="password" name="password" required/>
+
+				<label for="confirm_password">Confirm Password</label>
+				<input type="password" id="confirm_password" name="confirm_password" required/>
+
+				<label for="email">Email</label>
+		       		<input type="email" id="email" name="email" required/>
+
+				<label for="firstname">First Name</label>
+			    	<input type="text" id="firstname" name="firstName"required/>
+
+				<label for="lastname">Last Name</label>
+		       		<input type="text" id="lastname" name="lastName" required/>
+
+				<label for="address">Address</label>
+		       		<input type="text" id="address" name="address" required/>
+
+				<label for="SATScore">SAT Score</label>
+				<input type="number" id="SATScore" name="SATScore" required/>
+
+				<label for="major">Major</label>
+				<select type="text" id="major" name="major">
+					<option value="IT">IT</option>
+					<option value="CS">CS</option>
+	    			</select>
+
+				<input type="submit" value="Submit">
+	    		</form> 
+		</div>
+
+		<script>
+			var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
+			function validatePassword()
+			{
+			  	if(password.value != confirm_password.value)
+				{
+				   	confirm_password.setCustomValidity("Passwords Don't Match");
+		  		} 
+				else
+				{
+		   			confirm_password.setCustomValidity('');
+		  		}
+			}
+			password.onchange = validatePassword;
+			confirm_password.onkeyup = validatePassword;
+		</script>
+  	</body>
+</html>
